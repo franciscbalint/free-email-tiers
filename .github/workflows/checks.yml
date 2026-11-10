@@ -1,8 +1,8 @@
 name: checks
 
+# No path filter: this check is required on main, so it has to run on every pull request.
 on:
   pull_request:
-    paths: ["services/**", "meta/**", "scripts/**"]
 
 permissions:
   contents: read
