@@ -1,0 +1,16 @@
+name: MailboxValidator
+website: https://www.mailboxvalidator.com
+category: verification
+description: Email validation API and bulk list cleaning.
+free:
+  allowance: 300 API queries per month
+  conditions: API plan only; the bulk upload plan is a one-time trial.
+evidence:
+  url: https://www.mailboxvalidator.com/plans
+  quote: Per Month 30-Day Validity 300 Queries Auto Renewal
+  checked: 2026-11-11
+privacy_policy: https://www.mailboxvalidator.com/privacy-policy
+vendor:
+  domains:
+  - mailboxvalidator.com
+  github_org: MailboxValidator

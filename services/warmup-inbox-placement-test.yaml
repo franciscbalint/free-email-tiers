@@ -1,0 +1,16 @@
+name: Warmup Inbox Placement Test
+website: https://www.warmupinbox.com/tools/placement-test/
+category: testing
+description: Inbox placement test that sends to seed inboxes at Gmail, Outlook, Yahoo and iCloud and checks SPF, DKIM, DMARC and blacklists.
+free:
+  allowance: Free placement tests; no limit stated
+  conditions: No signup needed.
+evidence:
+  url: https://www.warmupinbox.com/tools/placement-test/
+  quote: The test runs with no signup and no card.
+  checked: 2026-11-11
+privacy_policy: https://www.warmupinbox.com/legal/privacy/
+vendor:
+  domains:
+  - warmupinbox.com
+  github_org: null

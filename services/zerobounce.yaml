@@ -1,0 +1,17 @@
+name: ZeroBounce
+website: https://www.zerobounce.net
+category: verification
+description: Email verification and scoring through an API, bulk list upload or web app.
+free:
+  allowance: 100 email verifications per month
+  conditions: Requires signing up with a business or premium email domain.
+evidence:
+  url: https://www.zerobounce.net/pricing
+  quote: 100 free monthly email verifications
+  checked: 2026-11-11
+privacy_policy: https://www.zerobounce.net/privacy-policy
+vendor:
+  domains:
+  - zerobounce.net
+  github_org: zerobounce
+maintainer_affiliated: true

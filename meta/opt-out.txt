@@ -1,0 +1,2 @@
+# Domains of vendors who asked not to be listed. One per line, e.g. example.com
+# Entries whose website is on one of these domains fail validation.

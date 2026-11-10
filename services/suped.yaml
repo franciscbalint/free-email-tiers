@@ -1,0 +1,16 @@
+name: Suped
+website: https://www.suped.com/
+category: authentication
+description: DMARC monitoring and hosted DMARC, with deliverability monitoring and alerts.
+free:
+  allowance: 1 domain, 1,000 emails per month, 14 days of data retention
+  conditions: No credit card required.
+evidence:
+  url: https://www.suped.com/pricing
+  quote: Free 1,000 emails per month
+  checked: 2026-11-11
+privacy_policy: https://www.suped.com/privacy-policy
+vendor:
+  domains:
+  - suped.com
+  github_org: null

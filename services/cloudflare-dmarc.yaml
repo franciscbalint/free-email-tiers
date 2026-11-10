@@ -1,0 +1,16 @@
+name: Cloudflare DMARC Management
+website: https://developers.cloudflare.com/dmarc-management/
+category: authentication
+description: Processes DMARC reports for domains on Cloudflare and shows sending sources and SPF, DKIM and DMARC pass rates.
+free:
+  allowance: No limit stated; included on every Cloudflare plan, including Free
+  conditions: The domain must be a Cloudflare zone. Still labelled beta.
+evidence:
+  url: https://developers.cloudflare.com/dmarc-management/
+  quote: Available on all plans
+  checked: 2026-11-11
+privacy_policy: https://www.cloudflare.com/privacypolicy/
+vendor:
+  domains:
+  - cloudflare.com
+  github_org: cloudflare

@@ -1,0 +1,16 @@
+name: QuickEmailVerification
+website: https://quickemailverification.com
+category: verification
+description: Bulk list verification and a real-time email verification API.
+free:
+  allowance: 100 email verifications per day
+  conditions: Signup asks for a work email.
+evidence:
+  url: https://quickemailverification.com/plans
+  quote: verify up to 100 email addresses for FREE daily on free tier
+  checked: 2026-11-11
+privacy_policy: https://quickemailverification.com/privacy
+vendor:
+  domains:
+  - quickemailverification.com
+  github_org: quickemailverification

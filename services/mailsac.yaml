@@ -1,0 +1,16 @@
+name: Mailsac
+website: https://mailsac.com/
+category: testing
+description: Disposable and private test inboxes with a REST API for reading app emails.
+free:
+  allowance: 1 private address and 1,500 API operations per month, plus public inboxes
+  conditions: Public inboxes are readable by anyone. 50 stored messages.
+evidence:
+  url: https://mailsac.com/pricing
+  quote: 1 private address and 1,500 operations a month
+  checked: 2026-11-11
+privacy_policy: https://docs.mailsac.com/en/latest/about/privacy_policy.html
+vendor:
+  domains:
+  - mailsac.com
+  github_org: mailsac

@@ -1,0 +1,16 @@
+name: UserCheck
+website: https://www.usercheck.com
+category: verification
+description: API that flags disposable, relay and free-provider addresses and checks a domain's MX, SPF and DMARC records.
+free:
+  allowance: 1,000 requests per month
+  conditions: 1 request per second. Checks domains, not individual mailboxes.
+evidence:
+  url: https://www.usercheck.com/
+  quote: 1,000 free requests each month.
+  checked: 2026-11-11
+privacy_policy: https://www.usercheck.com/legal/privacy
+vendor:
+  domains:
+  - usercheck.com
+  github_org: usercheckhq

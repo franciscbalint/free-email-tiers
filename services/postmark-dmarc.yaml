@@ -1,0 +1,17 @@
+name: Postmark DMARC Digests
+website: https://dmarc.postmarkapp.com/
+category: authentication
+description: Processes a domain's DMARC aggregate reports and emails a weekly summary.
+free:
+  allowance: Weekly DMARC digest covering the top 10 sending sources, 7 days of history
+  conditions: Email reports only, no dashboard. Your DMARC record must send reports to Postmark.
+evidence:
+  url: https://dmarc.postmarkapp.com/
+  quote: Free weekly email reports
+  checked: 2026-11-11
+privacy_policy: https://www.activecampaign.com/legal/privacy-policy
+vendor:
+  domains:
+  - postmarkapp.com
+  - activecampaign.com
+  github_org: ActiveCampaign

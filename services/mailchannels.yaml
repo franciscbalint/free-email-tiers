@@ -1,0 +1,16 @@
+name: MailChannels Email API
+website: https://www.mailchannels.com
+category: sending
+description: Transactional email sending API, also sold as outbound filtering for hosting providers.
+free:
+  allowance: 3,000 emails per month, max 100 per day
+  conditions: No overages.
+evidence:
+  url: https://www.mailchannels.com/pricing/
+  quote: Up to 3,000 emails per month
+  checked: 2026-11-11
+privacy_policy: https://www.mailchannels.com/privacy-policy/
+vendor:
+  domains:
+  - mailchannels.com
+  github_org: mailchannels

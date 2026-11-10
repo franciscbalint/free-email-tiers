@@ -1,0 +1,47 @@
+name: vendor verification
+
+# Runs with the base branch's code only; the pull request's files are never checked out or executed.
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
+    paths: ["services/**"]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Check whether the author speaks for the vendors whose entries change
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          # Existing entries that this pull request edits or deletes, as they are on the base branch.
+          files=$(gh api "repos/$REPO/pulls/$PR/files" --paginate \
+            --jq '.[] | select(.status == "modified" or .status == "removed" or .status == "renamed") | .previous_filename // .filename' \
+            | grep -E '^services/[^/]+\.yaml$' | sort -u || true)
+          if [ -z "$files" ]; then echo "No existing entries changed."; exit 0; fi
+          python3 scripts/fet.py vendor-check "$AUTHOR" $files | tee verdict.json
+          if [ "$(jq -r .verified verdict.json)" = "true" ]; then
+            gh label create vendor-verified --repo "$REPO" --color 0E8A16 \
+              --description "Author verified as the vendor" 2>/dev/null || true
+            gh pr edit "$PR" --repo "$REPO" --add-label vendor-verified
+            {
+              echo "Verified: @$AUTHOR speaks for the vendor of every entry this pull request changes."
+              echo
+              jq -r '.results[] | "- **\(.vendor)**: \(.proof)"' verdict.json
+            } > comment.md
+            gh pr comment "$PR" --repo "$REPO" --body-file comment.md
+          else
+            echo "Not vendor-verified. Fine for ordinary corrections; vendors see VENDORS.md."
+          fi

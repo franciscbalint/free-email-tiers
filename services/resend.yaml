@@ -1,0 +1,16 @@
+name: Resend
+website: https://resend.com
+category: sending
+description: Email API and SMTP relay for sending and receiving transactional email.
+free:
+  allowance: 3,000 emails per month, max 100 per day
+  conditions: 3 domains, 30 days of data retention. Inbound email counts toward the same quota.
+evidence:
+  url: https://resend.com/pricing
+  quote: 3,000 emails / mo
+  checked: 2026-11-11
+privacy_policy: https://resend.com/legal/privacy-policy
+vendor:
+  domains:
+  - resend.com
+  github_org: resend

@@ -1,0 +1,16 @@
+name: SendPulse SMTP
+website: https://sendpulse.com
+category: sending
+description: SMTP relay and transactional email API within a multichannel marketing platform.
+free:
+  allowance: 12,000 emails per month, max 50 per hour
+  conditions: 2 sending domains.
+evidence:
+  url: https://sendpulse.com/pricing/smtp
+  quote: you can send 12,000 emails via our SMTP service every month for free
+  checked: 2026-11-11
+privacy_policy: https://sendpulse.com/legal/pp
+vendor:
+  domains:
+  - sendpulse.com
+  github_org: null

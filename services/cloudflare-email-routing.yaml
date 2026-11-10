@@ -1,0 +1,16 @@
+name: Cloudflare Email Routing
+website: https://developers.cloudflare.com/email-service/
+category: receiving
+description: Forwards mail sent to custom-domain addresses to verified inboxes or to Workers.
+free:
+  allowance: Unlimited inbound emails on the Workers Free plan
+  conditions: Workers that process email are billed under Workers pricing.
+evidence:
+  url: https://developers.cloudflare.com/email-service/platform/pricing/
+  quote: Email Routing is available on both the Workers Free and Workers Paid plans
+  checked: 2026-11-11
+privacy_policy: https://www.cloudflare.com/privacypolicy/
+vendor:
+  domains:
+  - cloudflare.com
+  github_org: cloudflare

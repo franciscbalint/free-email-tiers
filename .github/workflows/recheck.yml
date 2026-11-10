@@ -1,0 +1,47 @@
+name: weekly evidence recheck
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Recheck every entry
+        id: run
+        run: |
+          set +e
+          python3 scripts/fet.py evidence > report.txt 2>&1
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat report.txt
+      - name: Open or update the tracking issue
+        if: steps.run.outputs.status != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          title="Weekly evidence check: entries need attention"
+          {
+            echo "These entries failed the evidence check on $(date -u +%F). The vendor may have changed its free tier or its pricing page."
+            echo
+            echo '```'
+            grep -E '^::error|failed:' report.txt | sed 's/^::error file=\([^:]*\)::/\1: /'
+            echo '```'
+          } > body.md
+          number=$(gh issue list --repo "$REPO" --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --repo "$REPO" --body-file body.md
+          else
+            gh issue create --repo "$REPO" --title "$title" --body-file body.md
+          fi

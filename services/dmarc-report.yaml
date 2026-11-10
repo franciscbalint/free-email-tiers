@@ -1,0 +1,17 @@
+name: DMARC Report
+website: https://dmarcreport.com/
+category: authentication
+description: Parses DMARC aggregate reports; operated by DuoCircle.
+free:
+  allowance: 1 domain, 10,000 DMARC messages per month, 30 days of history
+  conditions: Aggregate reports only. No credit card required.
+evidence:
+  url: https://dmarcreport.com/pricing/
+  quote: The Core plan is free forever for up to 10,000 DMARC messages per month
+  checked: 2026-11-11
+privacy_policy: https://www.duocircle.com/legal/privacy/
+vendor:
+  domains:
+  - dmarcreport.com
+  - duocircle.com
+  github_org: duocircle

@@ -1,0 +1,16 @@
+name: Forward Email
+website: https://forwardemail.net
+category: receiving
+description: Open-source email forwarding and hosting for custom domains.
+free:
+  allowance: Unlimited forwarding for unlimited domains
+  conditions: Forwarding only, no sending from the custom domain.
+evidence:
+  url: https://forwardemail.net/en/private-business-email
+  quote: the Free plan only supports email forwarding
+  checked: 2026-11-11
+privacy_policy: https://forwardemail.net/en/privacy
+vendor:
+  domains:
+  - forwardemail.net
+  github_org: forwardemail

@@ -1,0 +1,16 @@
+name: Lettermint
+website: https://lettermint.co
+category: sending
+description: European transactional and broadcast email API with SMTP relay and inbound processing.
+free:
+  allowance: 300 emails per month
+  conditions: 1 domain, 1 user. Transactional, broadcast and inbound email share the quota.
+evidence:
+  url: https://lettermint.co/pricing
+  quote: The Free plan includes up to 300 emails per month
+  checked: 2026-11-11
+privacy_policy: https://lettermint.co/privacy-policy
+vendor:
+  domains:
+  - lettermint.co
+  github_org: lettermint

@@ -1,0 +1,16 @@
+name: Mailtrap Email Sending
+website: https://mailtrap.io/email-sending/
+category: sending
+description: Email API and SMTP sending, sold alongside Mailtrap's testing sandbox.
+free:
+  allowance: 4,000 emails per month, max 150 per day
+  conditions: 1 user, 1 domain, 3 days of logs. No credit card required.
+evidence:
+  url: https://mailtrap.io/pricing/
+  quote: free plan includes 4,000 emails per month for free
+  checked: 2026-11-11
+privacy_policy: https://mailtrap.io/privacy/
+vendor:
+  domains:
+  - mailtrap.io
+  github_org: mailtrap

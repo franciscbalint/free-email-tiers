@@ -1,0 +1,16 @@
+name: Mailjet
+website: https://www.mailjet.com
+category: sending
+description: Email API, SMTP relay and email marketing platform.
+free:
+  allowance: 6,000 emails per month, max 200 per day
+  conditions: 1,000 contacts.
+evidence:
+  url: https://www.mailjet.com/pricing/
+  quote: 6,000 emails/month
+  checked: 2026-11-11
+privacy_policy: https://www.mailjet.com/legal/privacy-policy/
+vendor:
+  domains:
+  - mailjet.com
+  github_org: mailjet

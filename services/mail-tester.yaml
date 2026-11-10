@@ -1,0 +1,16 @@
+name: Mail-Tester
+website: https://www.mail-tester.com/
+category: testing
+description: Spam score test for a message sent to a generated address, covering SpamAssassin, authentication and blacklists.
+free:
+  allowance: 3 tests per 24 hours
+  conditions: Free results are public to anyone with the link and kept for 7 days. The API is paid.
+evidence:
+  url: https://www.mail-tester.com/faq
+  quote: You can perform 3 tests for free within the last 24 hours
+  checked: 2026-11-11
+privacy_policy: https://www.mail-tester.com/privacy-policy
+vendor:
+  domains:
+  - mail-tester.com
+  github_org: null

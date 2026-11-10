@@ -1,0 +1,16 @@
+name: SMTP2GO
+website: https://www.smtp2go.com
+category: sending
+description: SMTP relay and email API.
+free:
+  allowance: 1,000 emails per month
+  conditions: 5 days of reporting, ticket support only.
+evidence:
+  url: https://www.smtp2go.com/pricing/
+  quote: free plan for up to 1,000 emails per month
+  checked: 2026-11-11
+privacy_policy: https://www.smtp2go.com/privacy/
+vendor:
+  domains:
+  - smtp2go.com
+  github_org: smtp2go

@@ -1,0 +1,16 @@
+name: emailvalidation.io
+website: https://emailvalidation.io
+category: verification
+description: Email validation API with an email finder and an MCP server.
+free:
+  allowance: 100 credits per month (1 credit per validation)
+  conditions: 10 requests per minute, 1 API key.
+evidence:
+  url: https://emailvalidation.io/pricing/
+  quote: 'Free: 100 credits a month, 10 requests per minute, no credit card.'
+  checked: 2026-11-11
+privacy_policy: https://emailvalidation.io/privacy-policy/
+vendor:
+  domains:
+  - emailvalidation.io
+  github_org: everapihq

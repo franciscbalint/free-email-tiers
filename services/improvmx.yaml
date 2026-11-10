@@ -1,0 +1,16 @@
+name: ImprovMX
+website: https://improvmx.com
+category: receiving
+description: Email forwarding for custom domains.
+free:
+  allowance: 500 emails forwarded per day
+  conditions: 1 domain, 25 aliases, 7 days of logs. No sending.
+evidence:
+  url: https://improvmx.com/pricing/
+  quote: 500 emails forwarded per day
+  checked: 2026-11-11
+privacy_policy: https://improvmx.com/transparency/privacy-policy/
+vendor:
+  domains:
+  - improvmx.com
+  github_org: improvmx

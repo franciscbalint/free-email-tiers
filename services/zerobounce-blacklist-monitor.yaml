@@ -1,0 +1,17 @@
+name: ZeroBounce Blacklist Monitoring
+website: https://www.zerobounce.net/services/blacklist-monitoring
+category: authentication
+description: Monitors a domain or IP address against email blacklists and alerts when it is listed.
+free:
+  allowance: 1 blacklist monitor, scanned every 24 hours
+  conditions: Part of the free ZeroBounce account.
+evidence:
+  url: https://www.zerobounce.net/pricing
+  quote: 1 Blacklist Monitor Scanned every 24 hrs
+  checked: 2026-11-11
+privacy_policy: https://www.zerobounce.net/privacy-policy
+vendor:
+  domains:
+  - zerobounce.net
+  github_org: zerobounce
+maintainer_affiliated: true

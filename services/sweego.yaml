@@ -1,0 +1,16 @@
+name: Sweego
+website: https://www.sweego.io
+category: sending
+description: French email and SMS sending API with SMTP relay.
+free:
+  allowance: 100 emails per day
+  conditions: 7 days of logs. Inbound routing is paid.
+evidence:
+  url: https://www.sweego.io/pricing
+  quote: Send up to 100 emails a day with a free account
+  checked: 2026-11-11
+privacy_policy: https://www.sweego.io/privacy-policy
+vendor:
+  domains:
+  - sweego.io
+  github_org: Sweego-io

@@ -1,0 +1,17 @@
+name: Parcel
+website: https://parcel.io/
+category: testing
+description: Online email code editor with previews, HTML problem checks, accessibility testing and test sends.
+free:
+  allowance: 50 stored emails and 50 snippets
+  conditions: Screenshots in real email clients and spam scanning are paid.
+evidence:
+  url: https://parcel.io/pricing
+  quote: $ 0 50 emails 50 snippets
+  checked: 2026-11-11
+privacy_policy: https://customer.io/legal/privacy-policy
+vendor:
+  domains:
+  - parcel.io
+  - customer.io
+  github_org: useparcel

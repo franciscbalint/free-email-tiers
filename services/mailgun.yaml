@@ -1,0 +1,16 @@
+name: Mailgun
+website: https://www.mailgun.com
+category: sending
+description: Email API and SMTP relay for sending, receiving and tracking email.
+free:
+  allowance: 100 emails per day
+  conditions: 1 custom sending domain, 1 API key.
+evidence:
+  url: https://www.mailgun.com/pricing/
+  quote: 100 emails per day
+  checked: 2026-11-11
+privacy_policy: https://www.mailgun.com/legal/privacy-policy/
+vendor:
+  domains:
+  - mailgun.com
+  github_org: mailgun

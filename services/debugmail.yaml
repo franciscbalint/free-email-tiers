@@ -1,0 +1,16 @@
+name: DebugMail
+website: https://debugmail.io/
+category: testing
+description: Hosted fake SMTP server that collects test emails per project for a team to review.
+free:
+  allowance: 1 project, 2 team members, unlimited test emails
+  conditions: 10 MB storage per team; 1 forwarded email per day.
+evidence:
+  url: https://debugmail.io/
+  quote: Free Silver Gold Projects 1 10 Unlimited Team Members 2 20
+  checked: 2026-11-11
+privacy_policy: https://app.debugmail.io/privacy-policy
+vendor:
+  domains:
+  - debugmail.io
+  github_org: null

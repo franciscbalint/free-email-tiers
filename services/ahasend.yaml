@@ -1,0 +1,16 @@
+name: AhaSend
+website: https://ahasend.com
+category: sending
+description: Transactional email API and SMTP service on EU infrastructure.
+free:
+  allowance: 1,000 emails per month
+  conditions: 3 sending domains, community support. No credit card required.
+evidence:
+  url: https://ahasend.com/pricing
+  quote: 1000 emails per month
+  checked: 2026-11-11
+privacy_policy: https://ahasend.com/privacy
+vendor:
+  domains:
+  - ahasend.com
+  github_org: AhaSend

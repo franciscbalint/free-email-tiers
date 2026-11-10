@@ -1,0 +1,16 @@
+# Copy to services/<name>.yaml (lowercase, dashes). Every value comes from the vendor's own site.
+name: Example Mail
+website: https://www.example.com
+category: verification   # verification | sending | receiving | testing | authentication
+description: One factual sentence on what the service does.   # 160 characters max, no "best" or "leading"
+free:
+  allowance: 100 verifications per month       # must contain a number, or "unlimited"
+  conditions: Requires a business email to sign up.   # optional; anything that limits the free tier
+evidence:
+  url: https://www.example.com/pricing          # the public pricing page
+  quote: "100 free verifications every month"   # copied exactly from that page, 15 words max
+  checked: 2026-11-11                           # the date you read the page
+privacy_policy: https://www.example.com/privacy
+vendor:
+  domains: [example.com]       # domains the vendor sends email from; used to verify removal requests
+  github_org: example          # the vendor's official GitHub organization, or null

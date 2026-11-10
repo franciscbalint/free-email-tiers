@@ -1,0 +1,16 @@
+name: Mailhardener
+website: https://www.mailhardener.com/
+category: authentication
+description: Processes DMARC, TLS-RPT and related email security reports.
+free:
+  allowance: 1 domain, 1 user, up to 1 month of data retention
+  conditions: For personal or evaluation use.
+evidence:
+  url: https://www.mailhardener.com/pricing
+  quote: allows a single domain with up to one month of data retention
+  checked: 2026-11-11
+privacy_policy: https://www.mailhardener.com/legal/privacy-statement
+vendor:
+  domains:
+  - mailhardener.com
+  github_org: null

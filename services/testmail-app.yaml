@@ -1,0 +1,16 @@
+name: Testmail.app
+website: https://testmail.app/
+category: testing
+description: Email testing API (GraphQL and JSON) with unlimited addresses for receiving and querying test emails.
+free:
+  allowance: 100 emails per month, unlimited addresses and users
+  conditions: 1 day of retention and one random namespace. New accounts start on a 14-day trial, then move to Free.
+evidence:
+  url: https://testmail.app/pricing/
+  quote: free plan which includes 100 emails/month
+  checked: 2026-11-11
+privacy_policy: https://testmail.app/privacy/
+vendor:
+  domains:
+  - testmail.app
+  github_org: testmail-app

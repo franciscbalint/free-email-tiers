@@ -1,0 +1,16 @@
+name: Abstract API Email Validation
+website: https://www.abstractapi.com
+category: verification
+description: Email validation API returning format, MX, SMTP, disposable and risk data as JSON.
+free:
+  allowance: 100 requests per month
+  conditions: No credit card required.
+evidence:
+  url: https://www.abstractapi.com/pricing
+  quote: 100 requests a month, no credit card.
+  checked: 2026-11-11
+privacy_policy: https://www.abstractapi.com/legal/legal
+vendor:
+  domains:
+  - abstractapi.com
+  github_org: abstractapi

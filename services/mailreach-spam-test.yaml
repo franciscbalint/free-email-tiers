@@ -1,0 +1,15 @@
+name: MailReach Email Spam Test
+website: https://www.mailreach.co/email-spam-test
+category: testing
+description: Spam and inbox placement test that reports where a message lands across seed mailboxes.
+free:
+  allowance: 3 tests per 24 hours
+evidence:
+  url: https://www.mailreach.co/email-spam-test
+  quote: free for up to 3 tests per 24 hours
+  checked: 2026-11-11
+privacy_policy: https://www.mailreach.co/privacy-policy
+vendor:
+  domains:
+  - mailreach.co
+  github_org: null

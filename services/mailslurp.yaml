@@ -1,0 +1,16 @@
+name: MailSlurp
+website: https://www.mailslurp.com/
+category: testing
+description: API and SDKs for creating test inboxes and receiving and checking emails in automated tests.
+free:
+  allowance: 250 emails received and 100 inboxes created per month
+  conditions: Temporary inboxes only; sending stays inside the sandbox. 1 user.
+evidence:
+  url: https://app.mailslurp.com/pricing/
+  quote: Emails received 250 / mo
+  checked: 2026-11-11
+privacy_policy: https://www.mailslurp.com/privacy-policy/
+vendor:
+  domains:
+  - mailslurp.com
+  github_org: mailslurp

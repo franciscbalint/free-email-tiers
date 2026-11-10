@@ -1,0 +1,16 @@
+name: Verimail
+website: https://verimail.io
+category: verification
+description: Email verification for uploaded files and through an API.
+free:
+  allowance: 100 verifications per month
+  conditions: No credit card required.
+evidence:
+  url: https://verimail.io/pricing
+  quote: Every account verifies 100 addresses a month free, with no card.
+  checked: 2026-11-11
+privacy_policy: https://verimail.io/privacy
+vendor:
+  domains:
+  - verimail.io
+  github_org: null

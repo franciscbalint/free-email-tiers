@@ -1,0 +1,17 @@
+name: Postmark
+website: https://postmarkapp.com
+category: sending
+description: Transactional email API and SMTP service with inbound processing.
+free:
+  allowance: 100 emails per month
+  conditions: No overages on the free Developer plan.
+evidence:
+  url: https://postmarkapp.com/pricing
+  quote: free Developer plan, which includes 100 emails every month
+  checked: 2026-11-11
+privacy_policy: https://www.activecampaign.com/legal/privacy-policy
+vendor:
+  domains:
+  - postmarkapp.com
+  - activecampaign.com
+  github_org: ActiveCampaign

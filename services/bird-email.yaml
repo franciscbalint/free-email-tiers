@@ -1,0 +1,17 @@
+name: Bird Email (formerly SparkPost)
+website: https://bird.com
+category: sending
+description: Transactional and campaign email API from Bird, which absorbed SparkPost.
+free:
+  allowance: 1,000 emails per month, max 50 per day
+  conditions: Sending stops at the limit.
+evidence:
+  url: https://bird.com/pricing/email
+  quote: 1K emails / month included
+  checked: 2026-11-11
+privacy_policy: https://bird.com/legal/privacy
+vendor:
+  domains:
+  - bird.com
+  - sparkpost.com
+  github_org: messagebird

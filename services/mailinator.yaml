@@ -1,0 +1,16 @@
+name: Mailinator
+website: https://www.mailinator.com/
+category: testing
+description: Public disposable inboxes for QA, with private domains and an API on paid plans.
+free:
+  allowance: Unlimited public inboxes
+  conditions: Public inboxes are readable by anyone and messages are kept only briefly.
+evidence:
+  url: https://www.mailinator.com/pricing/
+  quote: Unlimited Public Inboxes
+  checked: 2026-11-11
+privacy_policy: https://www.mailinator.com/privacy-policy/
+vendor:
+  domains:
+  - mailinator.com
+  github_org: null

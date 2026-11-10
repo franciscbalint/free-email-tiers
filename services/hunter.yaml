@@ -1,0 +1,16 @@
+name: Hunter
+website: https://hunter.io
+category: verification
+description: Email finder and outreach platform with an email verifier and API.
+free:
+  allowance: 50 credits per month
+  conditions: Credits are shared with Email Finder and Domain Search; a verification costs 0.5 credit. Credits don't roll over.
+evidence:
+  url: https://hunter.io/pricing
+  quote: 50 credits per month
+  checked: 2026-11-11
+privacy_policy: https://hunter.io/privacy-policy
+vendor:
+  domains:
+  - hunter.io
+  github_org: hunter-io

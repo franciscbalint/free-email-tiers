@@ -1,0 +1,16 @@
+name: Reoon Email Verifier
+website: https://www.reoon.com/email-verifier/
+category: verification
+description: Single and bulk email verification with a real-time API.
+free:
+  allowance: 20 email verifications per day
+  conditions: No credit card required.
+evidence:
+  url: https://www.reoon.com/email-verifier/
+  quote: Verify up to 20 emails per day.
+  checked: 2026-11-11
+privacy_policy: https://www.reoon.com/privacy-policy/
+vendor:
+  domains:
+  - reoon.com
+  github_org: null

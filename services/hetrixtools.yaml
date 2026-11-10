@@ -1,0 +1,15 @@
+name: HetrixTools Blacklist Monitor
+website: https://hetrixtools.com/
+category: authentication
+description: Checks IP addresses and domains against DNS blacklists and Microsoft SNDS and alerts on changes.
+free:
+  allowance: 32 blacklist monitors checked every 24 hours, 15 days of history
+evidence:
+  url: https://hetrixtools.com/pricing/blacklist-monitor/
+  quote: 32 monitors free forever
+  checked: 2026-11-11
+privacy_policy: https://hetrixtools.com/privacy-policy/
+vendor:
+  domains:
+  - hetrixtools.com
+  github_org: null

@@ -1,0 +1,16 @@
+name: MxToolbox
+website: https://mxtoolbox.com/
+category: authentication
+description: DNS and email diagnostics, with blacklist monitoring in the free account.
+free:
+  allowance: Weekly blacklist monitoring for 1 domain
+  conditions: Requires a free account.
+evidence:
+  url: https://mxtoolbox.com/c/products/pricing
+  quote: 'Blacklist Monitoring: Weekly Domain(s): 1'
+  checked: 2026-11-11
+privacy_policy: https://mxtoolbox.com/privacypolicy.aspx
+vendor:
+  domains:
+  - mxtoolbox.com
+  github_org: null

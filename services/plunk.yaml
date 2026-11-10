@@ -1,0 +1,16 @@
+name: Plunk
+website: https://www.useplunk.com
+category: sending
+description: Open-source platform for transactional, campaign and automated email.
+free:
+  allowance: 1,000 emails per month
+  conditions: Plunk branding on emails.
+evidence:
+  url: https://www.useplunk.com/pricing
+  quote: 'Free plan: 1,000 emails per month.'
+  checked: 2026-11-11
+privacy_policy: https://www.useplunk.com/privacy
+vendor:
+  domains:
+  - useplunk.com
+  github_org: useplunk

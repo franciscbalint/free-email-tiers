@@ -1,0 +1,16 @@
+name: Mailtrap Email Sandbox
+website: https://mailtrap.io/
+category: testing
+description: Hosted fake SMTP sandbox that captures test emails from development and staging for inspection.
+free:
+  allowance: 50 test emails per month, 1 sandbox, 1 user
+  conditions: Each sandbox keeps 10 emails.
+evidence:
+  url: https://mailtrap.io/pricing/
+  quote: $0 /month 50 test emails
+  checked: 2026-11-11
+privacy_policy: https://mailtrap.io/privacy/
+vendor:
+  domains:
+  - mailtrap.io
+  github_org: mailtrap

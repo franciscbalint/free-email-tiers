@@ -1,0 +1,16 @@
+name: Maileroo
+website: https://maileroo.com
+category: sending
+description: SMTP relay, email API and inbound routing.
+free:
+  allowance: 3,000 outbound emails per month
+  conditions: 2 sending domains. No credit card required.
+evidence:
+  url: https://maileroo.com/pricing
+  quote: send up to 3,000 emails/month at no cost
+  checked: 2026-11-11
+privacy_policy: https://maileroo.com/legal/privacy-policy
+vendor:
+  domains:
+  - maileroo.com
+  github_org: null

@@ -1,0 +1,16 @@
+name: Postmark Spam Check
+website: https://spamcheck.postmarkapp.com/
+category: testing
+description: JSON API and web form that returns a SpamAssassin score for a raw email.
+free:
+  allowance: Free service; no limit stated
+evidence:
+  url: https://spamcheck.postmarkapp.com/
+  quote: This service is provided for free from Postmark
+  checked: 2026-11-11
+privacy_policy: https://postmarkapp.com/privacy-policy
+vendor:
+  domains:
+  - postmarkapp.com
+  - activecampaign.com
+  github_org: ActiveCampaign

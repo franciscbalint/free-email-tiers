@@ -1,0 +1,16 @@
+name: mailboxlayer
+website: https://mailboxlayer.com
+category: verification
+description: Email validation REST API with syntax, typo, MX, SMTP and disposable checks.
+free:
+  allowance: 100 API requests per month
+  conditions: Non-commercial use only; no support.
+evidence:
+  url: https://mailboxlayer.com/pricing
+  quote: offering a volume of 100 monthly API requests
+  checked: 2026-11-11
+privacy_policy: https://mailboxlayer.com/privacy
+vendor:
+  domains:
+  - mailboxlayer.com
+  github_org: apilayer

@@ -1,0 +1,16 @@
+name: Verifalia
+website: https://verifalia.com
+category: verification
+description: Email verification through a web app, API, embeddable widget and open-source SDKs.
+free:
+  allowance: 25 email verifications per day
+  conditions: Unused daily credits expire at midnight GMT.
+evidence:
+  url: https://verifalia.com/pricing
+  quote: Our Free plan allows you to verify up to 25 email addresses per day
+  checked: 2026-11-11
+privacy_policy: https://verifalia.com/legal/privacy-policy
+vendor:
+  domains:
+  - verifalia.com
+  github_org: null

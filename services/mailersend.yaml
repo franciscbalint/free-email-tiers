@@ -1,0 +1,16 @@
+name: MailerSend
+website: https://www.mailersend.com
+category: sending
+description: Transactional email API and SMTP relay.
+free:
+  allowance: 500 emails per month
+  conditions: Needs account approval, a company address and a credit card. 1 sending domain, 100 API requests per day.
+evidence:
+  url: https://www.mailersend.com/pricing
+  quote: This plan lets you send up to 500 emails per month for free
+  checked: 2026-11-11
+privacy_policy: https://www.mailersend.com/legal/privacy-policy
+vendor:
+  domains:
+  - mailersend.com
+  github_org: mailersend
