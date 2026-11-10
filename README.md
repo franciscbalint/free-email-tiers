@@ -38,7 +38,7 @@ Every entry links to the vendor's own pricing page and quotes the line that stat
 - **[UserCheck](https://www.usercheck.com)** - API that flags disposable, relay and free-provider addresses and checks a domain's MX, SPF and DMARC records. **Free:** 1,000 requests per month. _1 request per second. Checks domains, not individual mailboxes._ <sub>[source](https://www.usercheck.com/), checked 2026-11-11</sub>
 - **[Verifalia](https://verifalia.com)** - Email verification through a web app, API, embeddable widget and open-source SDKs. **Free:** 25 email verifications per day. _Unused daily credits expire at midnight GMT._ <sub>[source](https://verifalia.com/pricing), checked 2026-11-11</sub>
 - **[Verimail](https://verimail.io)** - Email verification for uploaded files and through an API. **Free:** 100 verifications per month. _No credit card required._ <sub>[source](https://verimail.io/pricing), checked 2026-11-11</sub>
-- **[ZeroBounce ‡](https://www.zerobounce.net)** - Email verification and scoring through an API, bulk list upload or web app. **Free:** 100 email verifications per month. _Requires signing up with a business or premium email domain._ <sub>[source](https://www.zerobounce.net/pricing), checked 2026-11-11</sub>
+- **[ZeroBounce ‡](https://www.zerobounce.net)** - Email verification and scoring through an API, bulk list uploads or a web app. **Free:** 100 email verifications per month. _Requires signing up with a business or premium email domain._ <sub>[source](https://www.zerobounce.net/pricing), checked 2026-11-11</sub>
 
 ## Sending (SMTP and API)
 
