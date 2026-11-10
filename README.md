@@ -20,7 +20,7 @@ Every entry links to the vendor's own pricing page and quotes the line that stat
 - [Sending (SMTP and API)](#sending-smtp-and-api) (16)
 - [Receiving and forwarding](#receiving-and-forwarding) (4)
 - [Testing and sandboxes](#testing-and-sandboxes) (11)
-- [Authentication and deliverability monitoring](#authentication-and-deliverability-monitoring) (9)
+- [Authentication and deliverability monitoring](#authentication-and-deliverability-monitoring) (8)
 
 ## Email verification
 
@@ -85,7 +85,6 @@ Every entry links to the vendor's own pricing page and quotes the line that stat
 - **[MxToolbox](https://mxtoolbox.com/)** - DNS and email diagnostics, with blacklist monitoring in the free account. **Free:** Weekly blacklist monitoring for 1 domain. _Requires a free account._ <sub>[source](https://mxtoolbox.com/c/products/pricing), checked 2026-11-11</sub>
 - **[Postmark DMARC Digests](https://dmarc.postmarkapp.com/)** - Processes a domain's DMARC aggregate reports and emails a weekly summary. **Free:** Weekly DMARC digest covering the top 10 sending sources, 7 days of history. _Email reports only, no dashboard. Your DMARC record must send reports to Postmark._ <sub>[source](https://dmarc.postmarkapp.com/), checked 2026-11-11</sub>
 - **[Suped](https://www.suped.com/)** - DMARC monitoring and hosted DMARC, with deliverability monitoring and alerts. **Free:** 1 domain, 1,000 emails per month, 14 days of data retention. _No credit card required._ <sub>[source](https://www.suped.com/pricing), checked 2026-11-11</sub>
-- **[Valimail Monitor](https://www.valimail.com/products/monitor/)** - DMARC monitoring that lists the services sending email for your domain and their SPF, DKIM and DMARC status. **Free:** DMARC monitoring; no limit stated. <sub>[source](https://www.valimail.com/products/monitor/), checked 2026-11-11</sub>
 - **[ZeroBounce Blacklist Monitoring ‡](https://www.zerobounce.net/services/blacklist-monitoring)** - Monitors a domain or IP address against email blacklists and alerts when it is listed. **Free:** 1 blacklist monitor, scanned every 24 hours. _Part of the free ZeroBounce account._ <sub>[source](https://www.zerobounce.net/pricing), checked 2026-11-11</sub>
 
 ## Corrections and removal
