@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Email Tiers</title>
+<meta name="description" content="Email infrastructure services with a free tier that doesn't run out. Every entry quotes the vendor's own pricing page, rechecked weekly.">
+<style>
+  :root {
+    --bg: #fbfbfa; --surface: #ffffff; --text: #1d1f23; --muted: #5d636d; --line: #e3e4e6;
+    --accent: #1f6feb; --accent-soft: #e8f0fe; --free: #116329; --free-soft: #e6f4ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111316; --surface: #181b20; --text: #e6e8eb; --muted: #9aa1ab; --line: #2a2f36;
+      --accent: #6ea8fe; --accent-soft: #1c2a40; --free: #6fd08c; --free-soft: #15291c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111316; --surface: #181b20; --text: #e6e8eb; --muted: #9aa1ab; --line: #2a2f36;
+    --accent: #6ea8fe; --accent-soft: #1c2a40; --free: #6fd08c; --free-soft: #15291c;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  a { color: var(--accent); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 40px 0 16px; }
+  h1 { margin: 0 0 8px; font-size: 32px; letter-spacing: -0.02em; }
+  .lede { margin: 0 0 16px; color: var(--muted); max-width: 640px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .btn { display: inline-block; padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px;
+         background: var(--surface); color: var(--text); text-decoration: none; font-size: 14px; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .controls { position: sticky; top: 0; z-index: 1; background: var(--bg); padding: 12px 0; border-bottom: 1px solid var(--line); }
+  input[type=search] { width: 100%; padding: 10px 12px; font: inherit; color: var(--text); background: var(--surface);
+                       border: 1px solid var(--line); border-radius: 8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .chip { padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+          color: var(--muted); font: inherit; font-size: 13px; cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  @media (max-width: 600px) {
+    .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+    .chip { flex: none; white-space: nowrap; }
+  }
+  h2 { font-size: 18px; margin: 28px 0 10px; }
+  h2 small { color: var(--muted); font-weight: normal; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px; }
+  .card h3 { margin: 0; font-size: 16px; }
+  .card h3 a { color: var(--text); text-decoration: none; }
+  .card h3 a:hover { text-decoration: underline; }
+  .desc { margin: 0; color: var(--muted); font-size: 14px; }
+  .free { margin: 0; font-size: 14px; background: var(--free-soft); color: var(--free); border-radius: 6px; padding: 6px 8px; font-weight: 600; }
+  .cond { margin: 0; font-size: 13px; color: var(--muted); }
+  .meta { margin-top: auto; font-size: 12px; color: var(--muted); }
+  .aff { font-size: 12px; color: var(--muted); font-weight: normal; }
+  .empty { color: var(--muted); padding: 24px 0; }
+  footer { margin: 40px 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Free Email Tiers</h1>
+    <p class="lede">Email infrastructure services with a free tier that doesn't run out. Every entry quotes the vendor's own pricing page, and a bot rechecks every quote each week. No trials, no one-time credits, no paid placement.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/franciscbalint/free-email-tiers/blob/main/AGENTS.md">Submit a service</a>
+      <a class="btn" href="https://github.com/franciscbalint/free-email-tiers">GitHub</a>
+      <a class="btn" href="data.json">Data (JSON)</a>
+    </div>
+  </header>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search by name, feature or allowance, e.g. 'SMTP' or 'per day'" aria-label="Search services">
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+  </div>
+
+  <main id="list"></main>
+
+  <footer>
+    <p><strong>Disclosure:</strong> maintained by Francisc Balint, who works at ZeroBounce. Entries marked ‡ are services the maintainer is affiliated with. They follow the same rules as every other entry.</p>
+    <p>Run one of these services? You can <a href="https://github.com/franciscbalint/free-email-tiers/blob/main/VENDORS.md">correct or remove your entry</a>. Spotted something wrong? <a href="https://github.com/franciscbalint/free-email-tiers/issues">Open an issue</a>.</p>
+    <p>Data is <a href="https://github.com/franciscbalint/free-email-tiers/blob/main/LICENSE">CC0</a>. Built <span id="built"></span>.</p>
+  </footer>
+</div>
+
+<script id="data" type="application/json">/*DATA*/</script>
+<script>
+  const DATA = JSON.parse(document.getElementById("data").textContent);
+  const list = document.getElementById("list");
+  const q = document.getElementById("q");
+  const chips = document.getElementById("chips");
+  let active = "all";
+
+  document.getElementById("built").textContent = DATA.built;
+
+  function el(tag, cls, text) {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function chip(key, label) {
+    const b = el("button", "chip", label);
+    b.type = "button";
+    b.setAttribute("aria-pressed", key === active ? "true" : "false");
+    b.onclick = () => { active = key; renderChips(); render(); };
+    return b;
+  }
+
+  function renderChips() {
+    chips.replaceChildren(chip("all", `All (${DATA.services.length})`),
+      ...DATA.categories.map(c => chip(c.key, `${c.title} (${DATA.services.filter(s => s.category === c.key).length})`)));
+  }
+
+  function card(s) {
+    const c = el("article", "card");
+    const h = el("h3");
+    const a = el("a", null, s.name);
+    a.href = s.website; a.rel = "noopener";
+    h.append(a);
+    if (s.affiliated) h.append(" ", el("span", "aff", "‡ maintainer's employer"));
+    c.append(h, el("p", "desc", s.description), el("p", "free", "Free: " + s.allowance));
+    if (s.conditions) c.append(el("p", "cond", s.conditions));
+    const m = el("div", "meta");
+    const src = el("a", null, "source");
+    src.href = s.source; src.rel = "noopener";
+    m.append(src, ` · checked ${s.checked}`);
+    c.append(m);
+    return c;
+  }
+
+  function render() {
+    const term = q.value.trim().toLowerCase();
+    const match = s => (active === "all" || s.category === active) &&
+      (!term || [s.name, s.description, s.allowance, s.conditions || ""].join(" ").toLowerCase().includes(term));
+    list.replaceChildren();
+    let shown = 0;
+    for (const cat of DATA.categories) {
+      const items = DATA.services.filter(s => s.category === cat.key && match(s));
+      if (!items.length) continue;
+      shown += items.length;
+      const h = el("h2", null, cat.title + " ");
+      h.append(el("small", null, `(${items.length})`));
+      const g = el("div", "grid");
+      g.append(...items.map(card));
+      list.append(h, g);
+    }
+    if (!shown) list.append(el("p", "empty", "No services match. Try a shorter search."));
+  }
+
+  q.addEventListener("input", render);
+  renderChips();
+  render();
+</script>
+</body>
+</html>

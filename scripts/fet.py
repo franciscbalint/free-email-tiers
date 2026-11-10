@@ -4,6 +4,7 @@
     python3 scripts/fet.py validate              # schema + duplicate checks for every service file
     python3 scripts/fet.py evidence [FILES...]   # fetch pages, confirm the evidence quote is on the pricing page
     python3 scripts/fet.py build                 # regenerate README.md from services/*.yaml
+    python3 scripts/fet.py site [DIR]            # build the GitHub Pages site (default: _site/)
     python3 scripts/fet.py vendor-check PR_AUTHOR FILE...   # is the PR author verified for these vendors?
 
 Needs Python 3.10+ and PyYAML.
@@ -30,6 +31,7 @@ README = ROOT / "README.md"
 INTRO = ROOT / "meta" / "intro.md"
 OUTRO = ROOT / "meta" / "outro.md"
 OPT_OUT = ROOT / "meta" / "opt-out.txt"
+SITE = ROOT / "meta" / "site.html"
 
 USER_AGENT = "Mozilla/5.0 (compatible; free-email-tiers-checker/1.0; +https://github.com/franciscbalint/free-email-tiers)"
 TXT_RECORD = "_free-email-tiers"
@@ -319,6 +321,38 @@ def cmd_build(args: list[str]) -> int:
     return 0
 
 
+def site_data() -> dict:
+    services = []
+    for path in service_files():
+        d = load(path)
+        services.append({
+            "slug": path.stem, "name": d["name"], "website": d["website"], "category": d["category"],
+            "description": d["description"].strip(), "allowance": d["free"]["allowance"].strip(),
+            "conditions": (d["free"].get("conditions") or "").strip() or None,
+            "source": d["evidence"]["url"], "checked": d["evidence"]["checked"].isoformat(),
+            "affiliated": bool(d.get("maintainer_affiliated")),
+        })
+    services.sort(key=lambda s: s["name"].casefold())
+    return {
+        "built": dt.date.today().isoformat(),
+        "categories": [{"key": k, "title": v} for k, v in CATEGORIES.items()],
+        "services": services,
+    }
+
+
+def cmd_site(args: list[str]) -> int:
+    out = Path(args[0]) if args else ROOT / "_site"
+    out.mkdir(parents=True, exist_ok=True)
+    data = site_data()
+    blob = json.dumps(data, ensure_ascii=False)
+    # The JSON sits inside a <script> tag, so a literal "</" must not appear in it.
+    page = SITE.read_text(encoding="utf-8").replace("/*DATA*/", blob.replace("</", "<\\/"))
+    (out / "index.html").write_text(page, encoding="utf-8")
+    (out / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"wrote {out}/index.html and data.json ({len(data['services'])} services)")
+    return 0
+
+
 # ---------------------------------------------------------------- vendor verification
 
 def is_public_member(org: str, user: str) -> bool:
@@ -374,7 +408,7 @@ def cmd_vendor_check(args: list[str]) -> int:
     return 0
 
 
-COMMANDS = {"validate": cmd_validate, "evidence": cmd_evidence, "build": cmd_build, "vendor-check": cmd_vendor_check}
+COMMANDS = {"validate": cmd_validate, "evidence": cmd_evidence, "build": cmd_build, "site": cmd_site, "vendor-check": cmd_vendor_check}
 
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] not in COMMANDS:
