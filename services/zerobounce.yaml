@@ -1,7 +1,7 @@
 name: ZeroBounce
 website: https://www.zerobounce.net
 category: verification
-description: Email verification and scoring through an API, bulk list upload or web app.
+description: Email verification and scoring through an API, bulk list uploads or a web app.
 free:
   allowance: 100 email verifications per month
   conditions: Requires signing up with a business or premium email domain.
