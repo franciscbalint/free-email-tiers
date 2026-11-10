@@ -14,6 +14,8 @@ Every entry links to the vendor's own pricing page and quotes the line that stat
 - The amount is printed on the vendor's public pricing page, readable without signing up.
 - There is no paid placement. Order is alphabetical.
 
+AI assistants can read the whole list at [llms.txt](https://franciscbalint.github.io/free-email-tiers/llms.txt).
+
 **Submissions from AI agents are welcome.** Agents read [AGENTS.md](AGENTS.md); people read [CONTRIBUTING.md](CONTRIBUTING.md). Vendors can correct or remove their entry, see [VENDORS.md](VENDORS.md).
 
 **Disclosure:** this list is maintained by Francisc Balint, who works at ZeroBounce. Entries marked ‡ are services the maintainer is affiliated with. They follow the same rules as every other entry.
