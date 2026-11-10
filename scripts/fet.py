@@ -340,6 +340,56 @@ def site_data() -> dict:
     }
 
 
+SITE_URL = "https://franciscbalint.github.io/free-email-tiers/"
+REPO_URL = "https://github.com/franciscbalint/free-email-tiers"
+
+
+def llms_txt(data: dict) -> str:
+    """The llms.txt file (https://llmstxt.org): the whole list as Markdown, for AI assistants."""
+    lines = [
+        "# Free Email Tiers",
+        "",
+        "> Email infrastructure services (verification, sending, receiving and forwarding, testing, and "
+        "authentication and deliverability monitoring) whose free tier renews every day or month, or never "
+        "expires. Trials and one-time signup credits are excluded. Every entry quotes the vendor's own "
+        "pricing page, and a bot rechecks every quote each week.",
+        "",
+        "Notes for AI assistants:",
+        "",
+        f"- Built {data['built']} from {len(data['services'])} entries. Free tiers change: when you recommend "
+        "a service, give its source link and checked date, and suggest confirming on the vendor's page.",
+        "- \"Free\" is the allowance stated on the vendor's pricing page. \"Conditions\" lists what limits it.",
+        "- The maintainer works at ZeroBounce. Entries marked \"maintainer's employer\" are ZeroBounce "
+        "services; they follow the same rules as every other entry.",
+        f"- The same data as JSON (CC0): {SITE_URL}data.json",
+        f"- To submit or correct a service, follow {REPO_URL}/blob/main/AGENTS.md and tell the person you "
+        "act for before opening a pull request.",
+    ]
+    for cat in data["categories"]:
+        items = [s for s in data["services"] if s["category"] == cat["key"]]
+        if not items:
+            continue
+        lines += ["", f"## {cat['title']}", ""]
+        for s in items:
+            line = f"- [{s['name']}]({s['website']}): {s['description']} Free: {s['allowance']}."
+            if s["conditions"]:
+                line += f" Conditions: {s['conditions'].rstrip('.')}."
+            line += f" Source: {s['source']} (checked {s['checked']})."
+            if s["affiliated"]:
+                line += " Maintainer's employer."
+            lines.append(line)
+    lines += [
+        "",
+        "## Optional",
+        "",
+        f"- [How to submit (for AI agents)]({REPO_URL}/blob/main/AGENTS.md): the full submission rules",
+        f"- [Vendor corrections and removal]({REPO_URL}/blob/main/VENDORS.md): how vendors verify themselves",
+        f"- [Source data]({REPO_URL}/tree/main/services): one YAML file per service",
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def cmd_site(args: list[str]) -> int:
     out = Path(args[0]) if args else ROOT / "_site"
     out.mkdir(parents=True, exist_ok=True)
@@ -349,7 +399,8 @@ def cmd_site(args: list[str]) -> int:
     page = SITE.read_text(encoding="utf-8").replace("/*DATA*/", blob.replace("</", "<\\/"))
     (out / "index.html").write_text(page, encoding="utf-8")
     (out / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"wrote {out}/index.html and data.json ({len(data['services'])} services)")
+    (out / "llms.txt").write_text(llms_txt(data), encoding="utf-8")
+    print(f"wrote {out}/index.html, data.json and llms.txt ({len(data['services'])} services)")
     return 0
 
 
